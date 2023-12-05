@@ -18,3 +18,7 @@ def get_day(day):
 
     with open(file_path, 'r') as file:
         return [x.strip() for x in file.readlines()]
+
+def get_test_data():
+    with open('data/test', 'r') as file:
+        return [x.strip() for x in file.readlines()]
