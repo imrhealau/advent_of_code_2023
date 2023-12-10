@@ -22,7 +22,7 @@ class Day():
     def get_day(self):
         header = {'Cookie':self.read_cookie()}
         url = f'https://adventofcode.com/2023/day/{self.day}/input'
-        file_path = f'data/day_{str(self.day) if self.day > 10 else "0"+str(self.day)}'
+        file_path = f'data/day_{str(self.day) if self.day >= 10 else "0"+str(self.day)}'
 
         if not os.path.exists(file_path):
             response = requests.get(url, headers=header)
